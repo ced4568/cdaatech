@@ -1,0 +1,300 @@
+<!-- Hallmark · macrostructure: Bento Grid · F1 knobs: tiles=9, spans=irregular, accent=corner-only
+ * genre: modern-minimal · theme: Coral (catalog) · paper: warm-grey oklch(96% 0.012 55) · accent: coral oklch(66% 0.17 32) · display+body: Geist
+ * axes: light / geometric-sans / warm — differs from prior CDAA builds (all cool-hued) on accent hue
+ * nav: N5 floating pill (new this session) · footer: Ft1 mast-headed (new this session)
+ * studied: no · context: fourth exploratory mockup, catalog-theme variant · v1.0.0
+ * pre-emit critique: P4 H4 E4 S4 R4 V5
+ -->
+<title>CDAA Technologies · Bento</title>
+<meta name="description" content="CDAA Technologies builds and operates technology companies focused on engineering, automation, intelligent systems, infrastructure, and advanced manufacturing.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+
+  :root{
+    --color-paper: oklch(96% 0.012 55);
+    --color-paper-2: oklch(93% 0.014 55);
+    --color-ink: oklch(20% 0.010 50);
+    --color-ink-2: oklch(38% 0.010 50);
+    --color-rule: oklch(88% 0.012 55);
+    --color-rule-2: oklch(82% 0.014 55);
+    --color-muted: oklch(52% 0.010 50);
+    --color-accent: oklch(66% 0.17 32);
+    --color-accent-ink: oklch(99% 0.006 55);
+    --color-focus: oklch(58% 0.18 32);
+
+    --font-display: "Geist", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Geist Mono", ui-monospace, monospace;
+
+    --text-xs: 0.75rem; --text-sm: 0.875rem; --text-base: 1rem;
+    --text-md: 1.1875rem; --text-lg: 1.4375rem; --text-xl: 1.75rem;
+    --text-2xl: 2.25rem; --text-display: clamp(2.5rem, 4.6vw + 1rem, 4.5rem);
+
+    --space-3xs: 0.125rem; --space-2xs: 0.25rem; --space-xs: 0.5rem;
+    --space-sm: 0.75rem; --space-md: 1rem; --space-lg: 1.5rem;
+    --space-xl: 2.5rem; --space-2xl: 4rem; --space-3xl: 6rem;
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur-short: 220ms; --dur-long: 420ms;
+    --radius-md: 14px; --radius-pill: 999px;
+    --measure: 62ch;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ overflow-x:clip; scroll-behavior:smooth; }
+  body{ overflow-x:clip; }
+
+  body{ margin:0; background:var(--color-paper); color:var(--color-ink); font-family:var(--font-body); font-size:var(--text-base); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:600; font-style:normal; line-height:1.08; letter-spacing:-0.025em; margin:0; color:var(--color-ink); }
+  p{ margin:0; max-width:var(--measure); color:var(--color-ink-2); }
+  a{ color:inherit; }
+  img,svg{ max-width:100%; display:block; }
+  ul{ margin:0; padding:0; list-style:none; }
+  :focus-visible{ outline:2.5px solid var(--color-focus); outline-offset:3px; border-radius:4px; }
+
+  .container{ max-width:76rem; margin-inline:auto; padding-inline:clamp(1.25rem,4vw,3rem); }
+
+  /* ————— nav: N5 floating pill ————— */
+  .nav-wrap{ position:sticky; top:var(--space-md); z-index:200; display:flex; justify-content:center; padding-inline:1rem; }
+  .nav{ width:min(48rem, 100%); background:color-mix(in oklch, var(--color-paper) 85%, transparent); backdrop-filter:blur(14px) saturate(1.3); border:1px solid var(--color-rule); border-radius:var(--radius-pill); box-shadow:0 1px 2px oklch(20% 0.01 50 / 0.06), 0 8px 24px oklch(20% 0.01 50 / 0.06); }
+  .nav__row{ display:flex; align-items:center; justify-content:space-between; padding:var(--space-xs) var(--space-xs) var(--space-xs) var(--space-lg); gap:var(--space-lg); }
+  .wordmark{ font-family:var(--font-display); font-weight:700; font-size:var(--text-base); letter-spacing:-0.02em; color:var(--color-ink); text-decoration:none; white-space:nowrap; }
+  .wordmark .dot{ color:var(--color-accent); }
+  .nav__links{ display:flex; align-items:center; gap:var(--space-lg); }
+  .nav__link{ font-size:var(--text-sm); font-weight:500; color:var(--color-ink-2); text-decoration:none; white-space:nowrap; }
+  .nav__link:hover, .nav__link:focus-visible{ color:var(--color-ink); }
+
+  .btn{ display:inline-flex; align-items:center; gap:var(--space-xs); font-family:var(--font-body); font-size:var(--text-sm); font-weight:600; padding:var(--space-sm) var(--space-lg); border-radius:var(--radius-pill); text-decoration:none; cursor:pointer; white-space:nowrap; border:1.5px solid transparent; transition:background var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out), transform 100ms var(--ease-out); }
+  .btn--primary{ background:var(--color-ink); color:var(--color-paper); border-color:var(--color-ink); }
+  .btn--primary:hover{ background:var(--color-ink-2); }
+  .btn--primary:active{ transform:translateY(1px); }
+  .btn--outline{ background:transparent; color:var(--color-ink); border-color:var(--color-rule-2); }
+  .btn--outline:hover{ background:var(--color-paper-2); }
+  .btn--outline:active{ transform:translateY(1px); }
+  .btn--sm{ padding:var(--space-xs) var(--space-md); font-size:var(--text-xs); }
+
+  /* ————— hero ————— */
+  .hero{ padding-block:var(--space-3xl) var(--space-2xl); text-align:left; }
+  .hero__inner{ max-width:42rem; }
+  .hero__eyebrow{ display:inline-flex; align-items:center; gap:var(--space-xs); font-size:var(--text-xs); font-weight:600; color:var(--color-accent); margin-bottom:var(--space-lg); }
+  .hero__eyebrow::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--color-accent); }
+  .hero h1{ font-size:var(--text-display); overflow-wrap:anywhere; min-width:0; }
+  .hero p{ font-size:var(--text-md); margin-top:var(--space-lg); max-width:40ch; }
+  .hero__ctas{ display:flex; align-items:center; gap:var(--space-md); margin-top:var(--space-xl); flex-wrap:wrap; }
+
+  section{ padding-block:var(--space-3xl); }
+  .section-head{ max-width:40rem; margin-bottom:var(--space-2xl); }
+  .section-head h2{ font-size:var(--text-2xl); overflow-wrap:anywhere; min-width:0; }
+  .section-head p{ margin-top:var(--space-sm); font-size:var(--text-md); }
+
+  /* ————— bento grid ————— */
+  .bento{ display:grid; grid-template-columns:repeat(6, 1fr); grid-auto-rows:minmax(11rem, auto); gap:var(--space-lg); }
+  .tile{ border-radius:var(--radius-md); padding:var(--space-xl); display:flex; flex-direction:column; background:var(--color-paper); border:1px solid var(--color-rule); transition:border-color var(--dur-short) var(--ease-out); }
+  .tile:hover{ border-color:var(--color-rule-2); }
+  .tile--company-lg{ grid-column:span 4; grid-row:span 2; }
+  .tile--company-md{ grid-column:span 2; grid-row:span 2; background:var(--color-ink); border-color:var(--color-ink); }
+  .tile--company-md h3, .tile--company-md p, .tile--company-md .kicker{ color:var(--color-paper); }
+  .tile--future{ grid-column:span 3; border-style:dashed; }
+  .tile--quote{ grid-column:span 3; background:var(--color-paper-2); justify-content:center; }
+  .tile--industries{ grid-column:span 6; }
+  .tile--innovation{ grid-column:span 3; background:var(--color-accent); border-color:var(--color-accent); }
+  .tile--innovation h3, .tile--innovation p{ color:var(--color-accent-ink); }
+  .tile--leadership{ grid-column:span 3; }
+
+  .tile .eyebrow{ font-size:var(--text-xs); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:var(--color-muted); margin-bottom:var(--space-sm); }
+  .tile--innovation .eyebrow{ color:oklch(99% 0.006 55 / 0.8); }
+  .tile--company-md .eyebrow{ color:oklch(96% 0.01 55 / 0.7); }
+  .tile h3{ font-size:var(--text-xl); margin-bottom:var(--space-xs); }
+  .tile .kicker{ font-size:var(--text-sm); font-weight:600; color:var(--color-accent); margin-bottom:var(--space-md); }
+  .tile--company-md .kicker{ color:oklch(80% 0.10 32); }
+  .tile p{ font-size:var(--text-sm); }
+  .tile .link{ margin-top:auto; padding-top:var(--space-lg); display:inline-flex; align-items:center; gap:var(--space-2xs); font-size:var(--text-sm); font-weight:600; text-decoration:none; border-bottom:1.5px solid var(--color-accent); padding-bottom:2px; align-self:flex-start; }
+  .tile--company-md .link{ color:var(--color-paper); border-color:oklch(80% 0.10 32); }
+  .tile blockquote{ font-family:var(--font-display); font-size:var(--text-lg); font-weight:500; line-height:1.35; margin:0; }
+  .tile cite{ display:block; font-style:normal; font-size:var(--text-xs); color:var(--color-muted); margin-top:var(--space-md); }
+  .tile--future .chips{ display:flex; flex-wrap:wrap; gap:var(--space-xs); margin-top:auto; padding-top:var(--space-md); }
+  .chip{ font-size:var(--text-xs); font-weight:600; color:var(--color-muted); border:1px solid var(--color-rule-2); border-radius:var(--radius-pill); padding:var(--space-2xs) var(--space-sm); }
+
+  .industry-row{ display:flex; flex-wrap:wrap; gap:var(--space-sm); margin-top:var(--space-md); }
+  .industry-chip{ font-size:var(--text-sm); font-weight:600; color:var(--color-ink); background:var(--color-paper-2); border-radius:var(--radius-pill); padding:var(--space-xs) var(--space-lg); }
+
+  /* ————— careers / contact ————— */
+  .duo{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-lg); }
+  .duo__cell{ border:1px solid var(--color-rule); border-radius:var(--radius-md); padding:var(--space-2xl); }
+  .duo__cell h3{ font-size:var(--text-xl); margin-bottom:var(--space-sm); }
+  .duo__cell p{ font-size:var(--text-sm); margin-bottom:var(--space-lg); }
+  .duo-list li{ border-top:1px solid var(--color-rule); padding-block:var(--space-sm); display:flex; justify-content:space-between; align-items:center; gap:var(--space-md); }
+  .duo-list li:first-child{ border-top:none; }
+  .duo-list a{ text-decoration:none; font-weight:600; font-size:var(--text-sm); color:var(--color-ink); white-space:nowrap; }
+  .duo-list a:hover{ color:var(--color-accent); }
+  .duo-list span{ font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-muted); }
+
+  /* ————— footer: Ft1 mast-headed ————— */
+  footer{ padding-block:var(--space-2xl) var(--space-xl); border-top:1px solid var(--color-rule); margin-top:var(--space-xl); }
+  .footer-mast{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:var(--space-lg); }
+  .footer-mast p{ font-size:var(--text-sm); margin-top:var(--space-sm); max-width:32ch; }
+  .footer-links{ display:flex; gap:var(--space-lg); flex-wrap:wrap; }
+  .footer-links a{ font-size:var(--text-sm); color:var(--color-ink-2); text-decoration:none; white-space:nowrap; }
+  .footer-links a:hover{ color:var(--color-ink); text-decoration:underline; }
+  .footer-copy{ font-size:var(--text-xs); color:var(--color-muted); margin-top:var(--space-2xl); }
+
+  .reveal{ opacity:0; transform:translateY(10px); animation:reveal var(--dur-long) var(--ease-out) forwards; animation-delay:calc(var(--i,0) * 60ms); }
+  @keyframes reveal{ to{ opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{ animation-duration:150ms !important; animation-iteration-count:1 !important; transition-duration:150ms !important; }
+    .reveal{ animation:reveal-reduced 150ms linear forwards; }
+    @keyframes reveal-reduced{ to{ opacity:1; transform:none; } }
+  }
+
+  @media (max-width:60rem){
+    .bento{ grid-template-columns:repeat(2, 1fr); }
+    .tile--company-lg, .tile--company-md, .tile--future, .tile--quote, .tile--industries, .tile--innovation, .tile--leadership{ grid-column:span 2; grid-row:auto; }
+    .duo{ grid-template-columns:1fr; }
+    .nav__links a:not(.btn){ display:none; }
+  }
+  @media (max-width:40rem){
+    .bento{ grid-template-columns:1fr; gap:var(--space-md); }
+    .tile--company-lg, .tile--company-md, .tile--future, .tile--quote, .tile--industries, .tile--innovation, .tile--leadership{ grid-column:span 1; }
+    section{ padding-block:var(--space-2xl); }
+    .container{ padding-inline:1.25rem; }
+    .duo__cell{ padding:var(--space-lg); }
+    .footer-mast{ flex-direction:column; }
+  }
+</style>
+
+<a class="skip-link" href="#main" style="position:absolute; left:-999px; top:0; background:var(--color-ink); color:var(--color-paper); padding:0.75rem 1rem; z-index:1000;">Skip to content</a>
+
+<div class="nav-wrap">
+  <header class="nav">
+    <div class="nav__row">
+      <a href="#main" class="wordmark">CDAA<span class="dot">·</span>Tech</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="#bento">Companies</a>
+        <a class="nav__link" href="#careers">Careers</a>
+        <a class="btn btn--primary btn--sm" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner reveal" style="--i:0">
+        <span class="hero__eyebrow">Engineering &amp; technology holding company</span>
+        <h1>Engineering the future through technology</h1>
+        <p>We build and operate technology companies in engineering, automation, and infrastructure.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#bento">See the portfolio</a>
+          <a class="btn btn--outline" href="#contact">Talk to us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bento">
+    <div class="container">
+      <div class="section-head reveal" style="--i:0">
+        <h2>The portfolio, at a glance</h2>
+        <p>Operating companies, what's next, and what we believe — one board.</p>
+      </div>
+
+      <div class="bento">
+        <div class="tile tile--company-lg reveal" style="--i:1">
+          <span class="eyebrow">Operating · Engineering Supply</span>
+          <h3>BuildSource</h3>
+          <div class="kicker">Engineering Supply Company</div>
+          <p>Professional equipment and technology for engineers, manufacturers, educators, and makers.</p>
+          <a class="link" href="#">Visit BuildSource →</a>
+        </div>
+
+        <div class="tile tile--company-md reveal" style="--i:2">
+          <span class="eyebrow">Operating · AI Automation</span>
+          <h3>Synthos Systems</h3>
+          <div class="kicker">AI Automation &amp; Software</div>
+          <p>Workflow automation, AI agents, and business process optimization.</p>
+          <a class="link" href="#">Visit Synthos Systems →</a>
+        </div>
+
+        <div class="tile tile--future reveal" style="--i:3">
+          <span class="eyebrow">In development</span>
+          <h3>Future Ventures</h3>
+          <p>The next businesses in the portfolio — kept generic on purpose until they launch.</p>
+          <div class="chips">
+            <span class="chip">Infrastructure</span><span class="chip">Rack Systems</span><span class="chip">Energy</span><span class="chip">Autonomous</span>
+          </div>
+        </div>
+
+        <div class="tile tile--quote reveal" style="--i:1">
+          <span class="eyebrow">Who we are</span>
+          <blockquote>The company that builds companies — built for partners and engineers, not a checkout flow.</blockquote>
+        </div>
+
+        <div class="tile tile--industries reveal" style="--i:2">
+          <span class="eyebrow">Industries we serve</span>
+          <div class="industry-row">
+            <span class="industry-chip">Aerospace</span><span class="industry-chip">Manufacturing</span><span class="industry-chip">Education</span>
+            <span class="industry-chip">Government</span><span class="industry-chip">Research</span><span class="industry-chip">Healthcare</span>
+            <span class="industry-chip">Defense</span><span class="industry-chip">Enterprise Technology</span>
+          </div>
+        </div>
+
+        <div class="tile tile--innovation reveal" style="--i:3">
+          <span class="eyebrow">Innovation</span>
+          <h3>Applied, not decorative</h3>
+          <p>AI, robotics, and cloud infrastructure earn a place only when they solve a real engineering problem.</p>
+        </div>
+
+        <div class="tile tile--leadership reveal" style="--i:1">
+          <span class="eyebrow">Leadership</span>
+          <blockquote style="font-size:var(--text-md)">"We're building companies that engineers want to work for."</blockquote>
+          <cite>Founder &amp; CEO, CDAA Technologies</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="careers-contact">
+    <div class="container">
+      <div class="duo">
+        <div class="duo__cell" id="careers">
+          <h3>Careers</h3>
+          <p>We're building companies that engineers want to work for.</p>
+          <ul class="duo-list">
+            <li><a href="#">Our mission</a><span>why we build</span></li>
+            <li><a href="#">Open positions</a><span>current roles</span></li>
+            <li><a href="#">Culture</a><span>how we work</span></li>
+          </ul>
+        </div>
+        <div class="duo__cell" id="contact">
+          <h3>Contact</h3>
+          <p>Reach the right team directly.</p>
+          <ul class="duo-list">
+            <li><a href="mailto:hello@cdaatech.com">General inquiries</a><span>hello@</span></li>
+            <li><a href="mailto:bd@cdaatech.com">Business development</a><span>bd@</span></li>
+            <li><a href="mailto:partners@cdaatech.com">Partnerships</a><span>partners@</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-mast">
+      <div>
+        <a href="#main" class="wordmark">CDAA<span class="dot">·</span>Tech</a>
+        <p>An engineering and technology company that builds and operates innovative businesses.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#bento">Our Companies</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 CDAA Technologies LLC · cdaatech.com</p>
+  </div>
+</footer>
