@@ -6,9 +6,17 @@
  * studied: no · context: merges the two prior mockups into one toggleable system per user request · v1.2.0
  * pre-emit critique: P5 H4 E4 S4 R4 V4
  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CDAA Technologies · Engineering the Future Through Technology</title>
 <meta name="description" content="CDAA Technologies builds and operates technology companies focused on engineering, automation, intelligent systems, infrastructure, and advanced manufacturing.">
 <meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <script>
   (function(){
     var stored = localStorage.getItem('cdaa-theme');
@@ -17,8 +25,6 @@
   })();
 </script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-
   :root{
     /* — light (brand-literal spec) — default — */
     --color-navy:        #0F172A;
@@ -235,6 +241,8 @@
     .duo__cell{ padding:var(--space-lg); }
   }
 </style>
+</head>
+<body>
 
 <a class="skip-link" href="#main" style="position:absolute; left:-999px; top:0; background:var(--color-accent); color:var(--color-on-accent); padding:0.75rem 1rem; z-index:1000;">Skip to content</a>
 
@@ -279,10 +287,10 @@
       <div class="split reveal" style="--i:1">
         <div class="split__text">
           <div class="split__eyebrow">01 / OPERATING</div>
-          <h3>BuildSource</h3>
+          <h3>Tolerance Supply</h3>
           <div class="kicker">Engineering Supply Company</div>
           <p>Professional equipment and technology for engineers, manufacturers, educators, and makers.</p>
-          <a class="link" href="#">Visit BuildSource →</a>
+          <a class="link" href="#">Visit Tolerance Supply →</a>
         </div>
         <svg class="split__proof" viewBox="0 0 400 300" role="img" aria-label="Technical schematic representing inventory and supply flow">
           <g stroke="var(--color-rule)" stroke-width="1"><line x1="0" y1="75" x2="400" y2="75"/><line x1="0" y1="150" x2="400" y2="150"/><line x1="0" y1="225" x2="400" y2="225"/><line x1="100" y1="0" x2="100" y2="300"/><line x1="200" y1="0" x2="200" y2="300"/><line x1="300" y1="0" x2="300" y2="300"/></g>
@@ -438,3 +446,5 @@
     });
   })();
 </script>
+</body>
+</html>

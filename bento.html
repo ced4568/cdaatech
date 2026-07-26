@@ -5,9 +5,17 @@
  * studied: no · context: fourth exploratory mockup, catalog-theme variant · v1.0.0
  * pre-emit critique: P4 H4 E4 S4 R4 V5
  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CDAA Technologies · Bento</title>
 <meta name="description" content="CDAA Technologies builds and operates technology companies focused on engineering, automation, intelligent systems, infrastructure, and advanced manufacturing.">
 <meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <script>
   (function(){
     var stored = localStorage.getItem('cdaa-theme');
@@ -16,8 +24,6 @@
   })();
 </script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
-
   :root{
     --color-paper: oklch(96% 0.012 55);
     --color-paper-2: oklch(93% 0.014 55);
@@ -156,6 +162,7 @@
   .tile .link{ margin-top:auto; padding-top:var(--space-lg); display:inline-flex; align-items:center; gap:var(--space-2xs); font-size:var(--text-sm); font-weight:600; text-decoration:none; border-bottom:1.5px solid var(--color-accent); padding-bottom:2px; align-self:flex-start; }
   .tile--company-md .link{ color:var(--color-on-surface-inverse); border-color:var(--color-on-surface-inverse-2); }
   .tile blockquote{ font-family:var(--font-display); font-size:var(--text-lg); font-weight:500; line-height:1.35; margin:0; }
+  .tile blockquote.blockquote--sm{ font-size:var(--text-md); }
   .tile cite{ display:block; font-style:normal; font-size:var(--text-xs); color:var(--color-muted); margin-top:var(--space-md); }
   .tile--future .chips{ display:flex; flex-wrap:wrap; gap:var(--space-xs); margin-top:auto; padding-top:var(--space-md); }
   .chip{ font-size:var(--text-xs); font-weight:600; color:var(--color-muted); border:1px solid var(--color-rule-2); border-radius:var(--radius-pill); padding:var(--space-2xs) var(--space-sm); }
@@ -206,6 +213,8 @@
     .footer-mast{ flex-direction:column; }
   }
 </style>
+</head>
+<body>
 
 <a class="skip-link" href="#main" style="position:absolute; left:-999px; top:0; background:var(--color-ink); color:var(--color-paper); padding:0.75rem 1rem; z-index:1000;">Skip to content</a>
 
@@ -252,10 +261,10 @@
       <div class="bento">
         <div class="tile tile--company-lg reveal" style="--i:1">
           <span class="eyebrow">Operating · Engineering Supply</span>
-          <h3>BuildSource</h3>
+          <h3>Tolerance Supply</h3>
           <div class="kicker">Engineering Supply Company</div>
           <p>Professional equipment and technology for engineers, manufacturers, educators, and makers.</p>
-          <a class="link" href="#">Visit BuildSource →</a>
+          <a class="link" href="#">Visit Tolerance Supply →</a>
         </div>
 
         <div class="tile tile--company-md reveal" style="--i:2">
@@ -297,7 +306,7 @@
 
         <div class="tile tile--leadership reveal" style="--i:1">
           <span class="eyebrow">Leadership</span>
-          <blockquote style="font-size:var(--text-md)">"We're building companies that engineers want to work for."</blockquote>
+          <blockquote class="blockquote--sm">"We're building companies that engineers want to work for."</blockquote>
           <cite>Founder &amp; CEO, CDAA Technologies</cite>
         </div>
       </div>
@@ -306,6 +315,10 @@
 
   <section id="careers-contact">
     <div class="container">
+      <div class="section-head reveal" style="--i:0">
+        <h2>Build with us</h2>
+        <p>Open roles and the people to talk to — no forms, no gatekeeping.</p>
+      </div>
       <div class="duo">
         <div class="duo__cell" id="careers">
           <h3>Careers</h3>
@@ -366,3 +379,5 @@
     });
   })();
 </script>
+</body>
+</html>
