@@ -188,6 +188,10 @@
   .split .link:hover{ gap:var(--space-sm); color:var(--color-accent-2); }
   .split .link:focus-visible{ outline-offset:4px; }
   .split__proof{ aspect-ratio:4/3; border:1px solid var(--color-rule); border-radius:var(--radius-md); background:var(--color-paper-2); overflow:hidden; }
+  .company-logo{ display:block; width:min(17rem, 100%); height:auto; margin-bottom:var(--space-lg); }
+  .company-logo--dark{ display:none; }
+  [data-theme="dark"] .company-logo--light{ display:none; }
+  [data-theme="dark"] .company-logo--dark{ display:block; }
 
   .future-list{ display:flex; flex-wrap:wrap; gap:var(--space-sm); margin-top:var(--space-md); }
   .future-chip{ font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-muted); border:1px solid var(--color-rule); border-radius:var(--radius-sm); padding:var(--space-2xs) var(--space-sm); }
@@ -297,6 +301,8 @@
       <div class="split reveal" style="--i:1">
         <div class="split__text">
           <div class="split__eyebrow">01 / OPERATING</div>
+          <img class="company-logo company-logo--light" src="assets/companies/tolerance-supply-logo.svg" alt="Tolerance Supply">
+          <img class="company-logo company-logo--dark" src="assets/companies/tolerance-supply-logo-inverse.svg" alt="">
           <h3>Tolerance Supply</h3>
           <div class="kicker">Engineering Supply Company</div>
           <p>Professional equipment and technology for engineers, manufacturers, educators, and makers.</p>
@@ -313,6 +319,8 @@
       <div class="split split--reverse reveal" style="--i:2">
         <div class="split__text">
           <div class="split__eyebrow">02 / OPERATING</div>
+          <img class="company-logo company-logo--light" src="assets/companies/synthos-logo-dark.svg" alt="Synthos Systems">
+          <img class="company-logo company-logo--dark" src="assets/companies/synthos-logo-light.svg" alt="">
           <h3>Synthos Systems</h3>
           <div class="kicker">AI Automation &amp; Intelligent Software</div>
           <p>Workflow automation, AI agents, and business process optimization.</p>
