@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title desc">
+  <title id="title">CDAA Technologies modular mark</title>
+  <desc id="desc">Four engineered modules forming a unified square around a central core.</desc>
+  <path fill="#0F172A" d="M4 4h42v24H28v18H4z"/>
+  <path fill="#2563EB" d="M54 4h42v42H72V28H54z"/>
+  <path fill="#F97316" d="M4 54h24v18h18v24H4z"/>
+  <path fill="#0F172A" d="M54 54h18v18h24v24H54z"/>
+</svg>

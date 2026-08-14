@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 100" role="img" aria-labelledby="title desc">
+  <title id="title">CDAA Technologies</title>
+  <desc id="desc">CDAA Technologies corporate logo for light backgrounds.</desc>
+  <g transform="translate(0 0)">
+    <path fill="#0F172A" d="M4 4h42v24H28v18H4z"/>
+    <path fill="#2563EB" d="M54 4h42v42H72V28H54z"/>
+    <path fill="#F97316" d="M4 54h24v18h18v24H4z"/>
+    <path fill="#0F172A" d="M54 54h18v18h24v24H54z"/>
+  </g>
+  <text x="124" y="48" fill="#0F172A" font-family="'Space Grotesk', Inter, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-1.5">CDAA</text>
+  <text x="124" y="82" fill="#2563EB" font-family="'Space Grotesk', Inter, Arial, sans-serif" font-size="31" font-weight="600" letter-spacing="-.8">Technologies</text>
+</svg>
