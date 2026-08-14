@@ -1,6 +1,6 @@
-<!-- Hallmark · macrostructure: Split Studio (governs Companies + Leadership; hero is a standard eyebrow+headline+lede+CTA content hero, not Marquee — re-stamped honestly per self-audit)
+<!-- Hallmark · macrostructure: Split Studio (governs Companies + Leadership; hero is a standard eyebrow+headline+lede+CTA content hero, not Marquee, re-stamped honestly per self-audit)
  * genre: modern-minimal · theme: custom, dual-mode · light: paper oklch(99% 0.003 255) / accent oklch(52% 0.19 262) (brand-literal, hex-locked navy/slate per doc)
- * dark: paper oklch(14% 0.014 255) / accent oklch(68% 0.19 255) (instrument-panel) · display: Space Grotesk · body: Inter (brand-mandated, Gate 1 exception — user's own spec)
+ * dark: paper oklch(14% 0.014 255) / accent oklch(68% 0.19 255) (instrument-panel) · display: Space Grotesk · body: Inter (brand-mandated, Gate 1 exception: user's own spec)
  * axes: light↔dark toggle / geometric-sans / cool · nav: N9 edge-aligned minimal + theme toggle · footer: Ft5 statement
  * fixes applied from self-audit: gate 44a hero padding (was top-heavy, now bottom-heavy), gate 27 reduced-motion (reveal-reduced keyframe added), gate 24 spacing-scale (button/chip paddings rounded to tokens)
  * studied: no · context: merges the two prior mockups into one toggleable system per user request · v1.2.0
@@ -30,7 +30,7 @@
 </script>
 <style>
   :root{
-    /* — light (brand-literal spec) — default — */
+    /* light (brand-literal spec), default */
     --color-navy:        #0F172A;
     --color-navy-2:      #16213a;
     --color-blue:         oklch(50% 0.19 262);
@@ -70,7 +70,7 @@
   }
 
   [data-theme="dark"]{
-    /* — dark (instrument-panel) — */
+    /* dark (instrument-panel) */
     --color-paper:    oklch(14% 0.014 255);
     --color-paper-2:  oklch(19% 0.016 255);
     --color-ink:      oklch(95% 0.008 255);
@@ -109,7 +109,7 @@
 
   .container{ max-width:76rem; margin-inline:auto; padding-inline:clamp(1.25rem,4vw,3rem); }
 
-  /* ————— nav: N9 edge-aligned + theme toggle ————— */
+  /* nav: N9 edge-aligned + theme toggle */
   .nav{
     position:sticky; top:0; z-index:var(--z-sticky);
     background: color-mix(in oklch, var(--color-paper) 88%, transparent);
@@ -158,7 +158,7 @@
   .btn--outline:active{ transform:translateY(1px); }
   .btn--outline:disabled{ opacity:0.5; cursor:not-allowed; }
 
-  /* ————— hero ————— */
+  /* hero */
   .hero{ padding-block: var(--space-2xl) var(--space-3xl); position:relative; }
   .hero__grid-mark{ position:absolute; inset:0; pointer-events:none; overflow:hidden; opacity:0.45;
     background-image: linear-gradient(var(--color-rule) 1px, transparent 1px), linear-gradient(90deg, var(--color-rule) 1px, transparent 1px);
@@ -175,7 +175,7 @@
   .section-head h2{ font-size:var(--text-2xl); overflow-wrap:anywhere; min-width:0; }
   .section-head p{ margin-top:var(--space-sm); font-size:var(--text-md); }
 
-  /* ————— split studio diptych (Companies + Leadership) ————— */
+  /* split studio diptych (Companies + Leadership) */
   .split{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3xl); align-items:center; padding-block:var(--space-2xl); border-top:1px solid var(--color-rule); }
   .split:first-of-type{ border-top:none; }
   .split--reverse .split__text{ order:2; }
@@ -198,20 +198,20 @@
   .future-list{ display:flex; flex-wrap:wrap; gap:var(--space-sm); margin-top:var(--space-md); }
   .future-chip{ font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-muted); border:1px solid var(--color-rule); border-radius:var(--radius-sm); padding:var(--space-2xs) var(--space-sm); }
 
-  /* ————— who we are belt ————— */
+  /* who we are belt */
   .belt{ border-top:1px solid var(--color-rule); border-bottom:1px solid var(--color-rule); }
   .belt__row{ display:grid; grid-template-columns:0.7fr 1.3fr; gap:var(--space-3xl); padding-block:var(--space-2xl); }
   .belt__tags{ display:flex; flex-wrap:wrap; gap:var(--space-sm); align-content:flex-start; }
   .tag{ font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-ink-2); border:1px solid var(--color-rule); border-radius:999px; padding:var(--space-2xs) var(--space-md); }
   .tag--accent{ border-color:var(--color-accent); color:var(--color-accent-2); }
 
-  /* ————— leadership ————— */
+  /* leadership */
   .leadership{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3xl); align-items:center; }
   .leadership blockquote{ font-family:var(--font-display); font-size:var(--text-xl); font-weight:500; line-height:1.3; margin:0; overflow-wrap:anywhere; min-width:0; }
   .leadership cite{ display:block; font-style:normal; font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-muted); margin-top:var(--space-lg); }
   .leadership__diagram{ aspect-ratio:1; border:1px solid var(--color-rule); border-radius:var(--radius-md); background:var(--color-paper-2); }
 
-  /* ————— careers / contact ————— */
+  /* careers / contact */
   .duo{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--color-rule); border:1px solid var(--color-rule); border-radius:var(--radius-md); overflow:hidden; }
   .duo__cell{ background:var(--color-paper); padding:var(--space-2xl); }
   .duo__cell h3{ font-size:var(--text-xl); margin-bottom:var(--space-sm); }
@@ -222,7 +222,7 @@
   .duo-list a:hover{ color:var(--color-accent-2); }
   .duo-list span{ font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-muted); }
 
-  /* ————— footer: Ft5 statement ————— */
+  /* footer: Ft5 statement */
   footer{ padding-block:var(--space-3xl) var(--space-xl); border-top:1px solid var(--color-rule); }
   .footer-statement{ max-width:26ch; font-family:var(--font-display); font-weight:600; font-size:clamp(1.75rem, 3.2vw + 1rem, 3rem); line-height:1.12; letter-spacing:-0.02em; overflow-wrap:anywhere; min-width:0; }
   .footer-meta{ display:flex; justify-content:space-between; align-items:flex-end; margin-top:var(--space-2xl); padding-top:var(--space-lg); border-top:1px solid var(--color-rule); flex-wrap:wrap; gap:var(--space-lg); }
@@ -261,7 +261,7 @@
 
 <header class="nav">
   <div class="container nav__row">
-    <a href="#main" class="wordmark" aria-label="CDAA Technologies — home">
+    <a href="#main" class="wordmark" aria-label="CDAA Technologies home">
       <img class="wordmark__logo wordmark__light" src="assets/brand/cdaa-logo-light.svg" alt="CDAA Technologies">
       <img class="wordmark__logo wordmark__dark" src="assets/brand/cdaa-logo-dark.svg" alt="">
     </a>
@@ -297,7 +297,7 @@
     <div class="container">
       <div class="section-head reveal" style="--i:0">
         <h2>Two operating companies. More on the way.</h2>
-        <p>Every CDAA business keeps its own name and identity — this is the proof, not a pitch.</p>
+        <p>Every CDAA business keeps its own name and identity. This is the proof, not a pitch.</p>
       </div>
 
       <div class="split reveal" style="--i:1">
@@ -359,7 +359,7 @@
         </div>
       </div>
       <div class="reveal" style="--i:1">
-        <p style="font-size:var(--text-md); color:var(--color-ink);">CDAA Technologies develops and operates engineering-focused businesses serving manufacturers, educators, enterprises, and innovators — built for partners, investors, and the engineers who'll eventually work here, not for a checkout flow.</p>
+        <p style="font-size:var(--text-md); color:var(--color-ink);">CDAA Technologies develops and operates engineering-focused businesses serving manufacturers, educators, enterprises, and innovators. It is built for partners, investors, and the engineers who'll eventually work here, not for a checkout flow.</p>
         <div class="belt__tags" style="margin-top:var(--space-xl)">
           <span class="tag tag--accent">Aerospace</span><span class="tag">Manufacturing</span><span class="tag">Education</span>
           <span class="tag">Government</span><span class="tag">Research</span><span class="tag">Healthcare</span>
@@ -373,7 +373,7 @@
     <div class="container">
       <div class="section-head reveal" style="--i:0">
         <h2>Innovation, applied</h2>
-        <p>Not adoption for its own sake — AI, robotics, and cloud infrastructure only where they solve a real engineering problem inside a portfolio company.</p>
+        <p>Not adoption for its own sake. We use AI, robotics, and cloud infrastructure only where they solve a real engineering problem inside a portfolio company.</p>
       </div>
     </div>
   </section>
@@ -381,7 +381,7 @@
   <section id="leadership">
     <div class="container leadership">
       <div class="reveal" style="--i:0">
-        <blockquote>"We're building companies that engineers want to work for — starting with the way we build the holding company itself."</blockquote>
+        <blockquote>"We're building companies that engineers want to work for, starting with the way we build the holding company itself."</blockquote>
         <cite>FOUNDER &amp; CEO, CDAA TECHNOLOGIES</cite>
         <p style="margin-top:var(--space-lg)">Led by a founder with a background in engineering and infrastructure. Every operating company gets the same discipline: solve a real problem, ship something reliable, think in decades.</p>
       </div>
@@ -425,7 +425,7 @@
   <div class="container">
     <p class="footer-statement">Let's build the next company together.</p>
     <div class="footer-meta">
-      <a href="#main" class="wordmark" aria-label="CDAA Technologies — home">
+      <a href="#main" class="wordmark" aria-label="CDAA Technologies home">
         <img class="wordmark__logo wordmark__light" src="assets/brand/cdaa-logo-light.svg" alt="CDAA Technologies">
         <img class="wordmark__logo wordmark__dark" src="assets/brand/cdaa-logo-dark.svg" alt="">
       </a>
