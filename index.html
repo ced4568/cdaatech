@@ -188,6 +188,8 @@
   .split .link:hover{ gap:var(--space-sm); color:var(--color-accent-2); }
   .split .link:focus-visible{ outline-offset:4px; }
   .split__proof{ aspect-ratio:4/3; border:1px solid var(--color-rule); border-radius:var(--radius-md); background:var(--color-paper-2); overflow:hidden; }
+  .split__proof img{ width:100%; height:100%; object-fit:cover; object-position:center; }
+  .split__proof--dashboard img{ object-position:center top; }
   .company-logo{ display:block; width:min(17rem, 100%); height:auto; margin-bottom:var(--space-lg); }
   .company-logo--dark{ display:none; }
   [data-theme="dark"] .company-logo--light{ display:none; }
@@ -308,12 +310,9 @@
           <p>Professional equipment and technology for engineers, manufacturers, educators, and makers.</p>
           <a class="link" href="https://tolerancesupply.com/">Visit Tolerance Supply →</a>
         </div>
-        <svg class="split__proof" viewBox="0 0 400 300" role="img" aria-label="Technical schematic representing inventory and supply flow">
-          <g stroke="var(--color-rule)" stroke-width="1"><line x1="0" y1="75" x2="400" y2="75"/><line x1="0" y1="150" x2="400" y2="150"/><line x1="0" y1="225" x2="400" y2="225"/><line x1="100" y1="0" x2="100" y2="300"/><line x1="200" y1="0" x2="200" y2="300"/><line x1="300" y1="0" x2="300" y2="300"/></g>
-          <rect x="60" y="110" width="80" height="80" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
-          <rect x="180" y="80" width="60" height="60" fill="none" stroke="var(--color-ink-2)" stroke-width="1.5"/>
-          <rect x="270" y="140" width="70" height="50" fill="none" stroke="var(--color-signal)" stroke-width="1.5"/>
-        </svg>
+        <figure class="split__proof">
+          <img src="assets/companies/tolerance-supply-fabrication.webp" alt="Industrial 3D printer producing a precision component" width="1200" height="800" loading="lazy">
+        </figure>
       </div>
 
       <div class="split split--reverse reveal" style="--i:2">
@@ -326,14 +325,9 @@
           <p>Workflow automation, AI agents, and business process optimization.</p>
           <a class="link" href="https://synthossystems.com/">Visit Synthos Systems →</a>
         </div>
-        <svg class="split__proof" viewBox="0 0 400 300" role="img" aria-label="Technical schematic representing a connected network of automated nodes">
-          <g stroke="var(--color-rule)" stroke-width="1"><line x1="0" y1="75" x2="400" y2="75"/><line x1="0" y1="150" x2="400" y2="150"/><line x1="0" y1="225" x2="400" y2="225"/><line x1="100" y1="0" x2="100" y2="300"/><line x1="200" y1="0" x2="200" y2="300"/><line x1="300" y1="0" x2="300" y2="300"/></g>
-          <g stroke="var(--color-accent)" stroke-width="1.25" fill="none"><line x1="80" y1="150" x2="200" y2="90"/><line x1="80" y1="150" x2="200" y2="210"/><line x1="200" y1="90" x2="320" y2="150"/><line x1="200" y1="210" x2="320" y2="150"/></g>
-          <circle cx="80" cy="150" r="6" fill="var(--color-ink-2)"/>
-          <circle cx="200" cy="90" r="6" fill="var(--color-accent)"/>
-          <circle cx="200" cy="210" r="6" fill="var(--color-accent)"/>
-          <circle cx="320" cy="150" r="7" fill="var(--color-signal)"/>
-        </svg>
+        <figure class="split__proof split__proof--dashboard">
+          <img src="assets/companies/synthos-noc-dashboard.webp" alt="Live Synthos Systems Kubernetes monitoring dashboard" width="1843" height="743" loading="lazy">
+        </figure>
       </div>
 
       <div class="split reveal" style="--i:3">
