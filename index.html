@@ -209,7 +209,8 @@
   .leadership{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3xl); align-items:center; }
   .leadership blockquote{ font-family:var(--font-display); font-size:var(--text-xl); font-weight:500; line-height:1.3; margin:0; overflow-wrap:anywhere; min-width:0; }
   .leadership cite{ display:block; font-style:normal; font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-muted); margin-top:var(--space-lg); }
-  .leadership__diagram{ aspect-ratio:1; border:1px solid var(--color-rule); border-radius:var(--radius-md); background:var(--color-paper-2); }
+  .leadership__diagram{ aspect-ratio:1; border:1px solid var(--color-rule); border-radius:var(--radius-md); background:var(--color-paper-2); margin:0; overflow:hidden; }
+  .leadership__diagram img{ width:100%; height:100%; object-fit:cover; object-position:center top; }
 
   /* careers / contact */
   .duo{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--color-rule); border:1px solid var(--color-rule); border-radius:var(--radius-md); overflow:hidden; }
@@ -221,6 +222,13 @@
   .duo-list a{ text-decoration:none; font-weight:600; font-size:var(--text-sm); color:var(--color-ink); white-space:nowrap; }
   .duo-list a:hover{ color:var(--color-accent-2); }
   .duo-list span{ font-family:var(--font-mono); font-size:var(--text-xs); color:var(--color-muted); }
+  .duo-list--details li{ display:block; }
+  .duo-list--details summary{ display:flex; justify-content:space-between; align-items:center; gap:var(--space-md); cursor:pointer; list-style:none; font-weight:600; font-size:var(--text-sm); color:var(--color-ink); }
+  .duo-list--details summary::-webkit-details-marker{ display:none; }
+  .duo-list--details summary:hover{ color:var(--color-accent-2); }
+  .duo-list--details summary span{ font-weight:400; }
+  .duo-list--details p{ font-size:var(--text-sm); color:var(--color-ink-2); margin-top:var(--space-sm); padding-right:var(--space-md); max-width:none; }
+  .duo-list--details p a{ color:var(--color-ink); font-weight:600; text-decoration:underline; text-decoration-color:var(--color-signal); }
 
   /* footer: Ft5 statement */
   footer{ padding-block:var(--space-3xl) var(--space-xl); border-top:1px solid var(--color-rule); }
@@ -385,12 +393,9 @@
         <cite>FOUNDER &amp; CEO, CDAA TECHNOLOGIES</cite>
         <p style="margin-top:var(--space-lg)">Led by a founder with a background in engineering and infrastructure. Every operating company gets the same discipline: solve a real problem, ship something reliable, think in decades.</p>
       </div>
-      <svg class="leadership__diagram reveal" style="--i:1" viewBox="0 0 400 400" role="img" aria-label="Abstract technical diagram">
-        <g stroke="var(--color-rule)" stroke-width="1"><line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="300" x2="400" y2="300"/><line x1="100" y1="0" x2="100" y2="400"/><line x1="200" y1="0" x2="200" y2="400"/><line x1="300" y1="0" x2="300" y2="400"/></g>
-        <circle cx="200" cy="180" r="70" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
-        <path d="M100 350 Q200 260 300 350" fill="none" stroke="var(--color-ink-2)" stroke-width="1.5"/>
-        <circle cx="200" cy="180" r="4" fill="var(--color-signal)"/>
-      </svg>
+      <figure class="leadership__diagram reveal" style="--i:1">
+        <img src="assets/brand/founder-headshot.jpg" alt="Founder &amp; CEO, CDAA Technologies" width="1200" height="967" loading="lazy">
+      </figure>
     </div>
   </section>
 
@@ -400,19 +405,25 @@
         <div class="duo__cell" id="careers">
           <h3>Careers</h3>
           <p>We're building companies that engineers want to work for.</p>
-          <ul class="duo-list">
-            <li><a href="#">Our mission</a><span>why we build</span></li>
-            <li><a href="#">Open positions</a><span>current roles</span></li>
-            <li><a href="#">Culture</a><span>how we work</span></li>
+          <ul class="duo-list duo-list--details">
+            <li><details><summary>Our mission<span>why we build</span></summary>
+              <p>To build enduring technology and engineering companies that solve real-world problems through innovation, automation, and practical solutions.</p>
+            </details></li>
+            <li><details><summary>Open positions<span>current roles</span></summary>
+              <p>No open roles right now — we're building the foundation first. Email <a href="mailto:info@cdaatech.com">info@cdaatech.com</a> and we'll keep you in mind as the portfolio scales.</p>
+            </details></li>
+            <li><details><summary>Culture<span>how we work</span></summary>
+              <p>Engineering excellence, integrity, and long-term thinking. Every operating company gets the same discipline: solve a real problem, ship something reliable, think in decades.</p>
+            </details></li>
           </ul>
         </div>
         <div class="duo__cell" id="contact">
           <h3>Contact</h3>
           <p>Reach the right team directly.</p>
           <ul class="duo-list">
-            <li><a href="mailto:hello@cdaatech.com">General inquiries</a><span>hello@</span></li>
-            <li><a href="mailto:bd@cdaatech.com">Business development</a><span>bd@</span></li>
-            <li><a href="mailto:partners@cdaatech.com">Partnerships</a><span>partners@</span></li>
+            <li><a href="mailto:info@cdaatech.com">General inquiries</a><span>info@cdaatech.com</span></li>
+            <li><a href="mailto:bd@cdaatech.com">Business development</a><span>bd@cdaatech.com</span></li>
+            <li><a href="mailto:partners@cdaatech.com">Partnerships</a><span>partners@cdaatech.com</span></li>
           </ul>
         </div>
       </div>
